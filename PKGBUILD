@@ -1,4 +1,3 @@
-# Maintainer: Josip Ponjavic <josipponjavic at gmail dot com>
 
 pkgname=conky-manager
 pkgver=2.2
