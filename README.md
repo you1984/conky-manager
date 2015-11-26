@@ -9,10 +9,10 @@ http://www.teejeetech.in/p/conky-manager.html
 
 It need a package from KCP: 
 
-https://github.com/KaOS-Community-Packages/libgee06
+https://github.com/KaOS-Community-Packages/libgee
 
 You need to install it first with the app kcp (without sudo):
 
-kcp -i libgee06
+kcp -i libgee
 
 
