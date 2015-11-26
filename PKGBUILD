@@ -1,26 +1,26 @@
 
 pkgname=conky-manager
-pkgver=2.3.3
-_ubuntu=~132~ubuntu15.04.1
+pkgver=2.4
+pkgbase=~136~ubuntu15.04.1
 pkgrel=1
 pkgdesc="GUI for managing Conky config files with options to browse and edit themes"
 url="https://launchpad.net/conky-manager"
 arch=('x86_64')
 license=('GPL3')
-depends=('cairo' 'conky' 'desktop-file-utils' 'gtk3' 'imagemagick' 'json-glib' 'libgee06' 'libsoup' 'p7zip' 'rsync')
+depends=('cairo' 'conky' 'desktop-file-utils' 'gtk3' 'imagemagick' 'json-glib' 'libgee' 'libsoup' 'p7zip' 'rsync')
 makedepends=('vala')
 options=(!emptydirs)
 install=conky-manager.install
-source=(http://ppa.launchpad.net/teejee2008/ppa/ubuntu/pool/main/c/${pkgname}/${pkgname}_${pkgver}${_ubuntu}.tar.xz)
-sha512sums=('b8470de6bf029911c7e4d610a8025c004831b88fb7dd15b4541161462b19987521b30a86c4e69305ae95527486ed6d08f491f31a82c8345c2d4e81a444292b94')
+source=(http://ppa.launchpad.net/teejee2008/ppa/ubuntu/pool/main/c/${pkgname}/${pkgname}_${pkgver}${pkgbase}.tar.xz)
+sha512sums=('647fc3cc28ab4ad11303fcc35ff66962ec4c18813a38ce47269e32dbe864482f7da1ceeea1663bb4257c6bc210bd8c9c285603057a20f5cf8a007a3ee412d165')
 
 build() {
-  cd ${pkgname}-${pkgver}${_ubuntu}
+  cd ${pkgname}-${pkgver}${pkgbase}
   make
 }
 
 package() {
-  cd ${pkgname}-${pkgver}${_ubuntu}
+  cd ${pkgname}-${pkgver}${pkgbase}
   make DESTDIR="${pkgdir}" install
 
   # fix make install problems
