@@ -1,7 +1,7 @@
 
 pkgname=conky-manager
 pkgver=2.4
-pkgbase=~136~ubuntu15.04.1
+pkgbase=~136~ubuntu15.10
 pkgrel=1
 pkgdesc="GUI for managing Conky config files with options to browse and edit themes"
 url="https://launchpad.net/conky-manager"
